@@ -1,0 +1,16 @@
+stages:
+  prepare:
+    cmd: python src/data/make_dataset.py
+    deps:
+      - src/data/make_dataset.py
+      - src/features/feature_definitions.py
+      - data/raw/train.csv
+    outs:
+      - data/processed/train.csv
+  train:
+    cmd: python src/models/train_model.py
+    deps:
+      - src/models/train_model.py
+      - data/processed/train.csv
+    outs:
+      - model.joblib
