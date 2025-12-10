@@ -31,32 +31,6 @@ This is a regression problem based on the NYC Taxi Trip Duration dataset.
 ✅ GitHub Actions CI pipeline
 
 
-End-to-End-MLOps-Pipeline-for-NYC-Taxi-Trip-Duration-Prediction
-├── LICENSE
-├── Makefile
-├── README.md
-├── requirements.txt
-├── dvc.yaml
-├── Dockerfile
-├── deployment.yaml
-├── seldon_deployment.yaml
-├── data
-│   ├── raw
-│   └── processed
-├── docs
-├── notebooks
-├── references
-├── reports
-│   └── figures
-├── src
-│   ├── data
-│   │   └── make_dataset.py
-│   ├── features
-│   │   └── feature_definitions.py
-│   ├── models
-│   │   ├── train_model.py
-│   │   └── predict_model.py
-│   └── visualization
-└── .github
-    └── workflows
-        └── ci.yml
+<img width="717" height="806" alt="image" src="https://github.com/user-attachments/assets/cefa8d28-e6f7-4843-9fe5-9a4cb30fbd52" />
+
+        
