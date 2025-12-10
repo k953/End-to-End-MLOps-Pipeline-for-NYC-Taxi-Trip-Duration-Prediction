@@ -1,95 +1,44 @@
-🚕 NYC Taxi Trip Duration
-End-to-End MLOps Project
-
-This project implements a production-ready end-to-end MLOps pipeline for predicting NYC Taxi Trip Duration, covering data processing, feature engineering, model training, data & model versioning, containerization, CI/CD, and deployment using Docker, Kubernetes, and Seldon Core.
-
-📌 Problem Statement
-
-Given pickup and drop-off locations along with time information, predict the expected taxi trip duration (in seconds).
-
-This is a regression problem based on the well-known NYC Taxi Trip Duration dataset.
-
-✨ Key Highlights
-
-✅ Modular data pipeline (Cookiecutter style)
-
-✅ Advanced feature engineering
-
-Distance (Haversine, Manhattan)
-
-Direction / Bearing
-
-Time-based features
-
-✅ XGBoost model for regression
-
-✅ DVC for data & model versioning
-
-✅ FastAPI for model serving
-
-✅ Docker containerization
-
-✅ Kubernetes deployment
-
-✅ Seldon Core for ML serving (optional)
-
-✅ GitHub Actions CI pipeline
-
-trip-duration-mlops/
-├── data/
-│   ├── raw/                # Raw NYC taxi CSV data
-│   └── processed/          # Feature-engineered data (DVC tracked)
+├── LICENSE
+├── Makefile           <- Makefile with commands like `make data` or `make train`
+├── README.md          <- The top-level README for developers using this project.
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
 │
-├── src/
-│   ├── data/
-│   │   └── make_dataset.py
-│   ├── features/
-│   │   └── feature_definitions.py
-│   └── models/
-│       └── train_model.py
+├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
-├── service.py              # FastAPI inference service
-├── dvc.yaml                # DVC pipeline definition
-├── params.yaml             # Training parameters (optional)
-├── Dockerfile
-├── deployment.yaml         # Kubernetes deployment
-├── seldon_deployment.yaml  # Seldon Core deployment
-├── requirements.txt
-├── .gitignore
-└── .github/workflows/ci.yml
-
-Tech Stack
-
-Language: Python
-
-ML: Scikit-learn, XGBoost
-
-MLOps: DVC
-
-API: FastAPI
-
-Container: Docker
-
-Orchestration: Kubernetes
-
-ML Serving: Seldon Core
-
-CI/CD: GitHub Actions
-
-Raw Data
-   ↓
-DVC (Versioning)
-   ↓
-Feature Engineering
-   ↓
-Model Training (XGBoost)
-   ↓
-Model Versioning
-   ↓
-Docker Image
-   ↓
-Kubernetes / Seldon Deployment
-   ↓
-FastAPI REST API
-   ↓
-Trip Duration Prediction
+├── models             <- Trained and serialized models, model predictions, or model summaries
+│
+├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+│                         the creator's initials, and a short `-` delimited description, e.g.
+│                         `1.0-jqp-initial-data-exploration`.
+│
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        <- Generated graphics and figures to be used in reporting
+│
+├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze > requirements.txt`
+│
+├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+├── src                <- Source code for use in this project.
+│   ├── __init__.py    <- Makes src a Python module
+│   │
+│   ├── data           <- Scripts to download or generate data
+│   │   └── make_dataset.py
+│   │
+│   ├── features       <- Scripts to turn raw data into features for modeling
+│   │   └── build_features.py
+│   │
+│   ├── models         <- Scripts to train models and then use trained models to make
+│   │   │                 predictions
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   │
+│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│       └── visualize.py
+│
+└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
